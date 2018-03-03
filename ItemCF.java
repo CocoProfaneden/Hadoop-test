@@ -16,7 +16,7 @@ public class ItemCF {
 	final static int RECOMMENDER_NUM = 3;//推荐物品的最大个数
 	
 	public static void main(String[] args) throws IOException, TasteException {
-		String file = "src/data/testCF.csv";
+		String file = "testCF.csv";
         DataModel model = new FileDataModel(new File(file));//数据模型
         ItemSimilarity item=new EuclideanDistanceSimilarity(model);//用户相识度算法
         Recommender r=new GenericItemBasedRecommender(model,item);//物品推荐算法
